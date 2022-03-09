@@ -9,9 +9,6 @@ Function passwdchange {
         )
 }
 
-#$info = New-ScriptFileInfo -Description UserpasschangeAD -Copyright Toni Ojala
-#$info
-
 # Haetaan käyttäjää AD:lta. Ellei löydy, niin kysyy sitä uudelleen, kunnes käyttäjä löytyy AD:lta.
 do {
 $user = Read-Host "Anna käyttajän nimi tai poistu painamalla 'q'"
