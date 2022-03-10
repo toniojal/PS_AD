@@ -1,4 +1,22 @@
-﻿# Funktiomääritteet jotka voi halutessaan etukäteen määrittää
+<#
+.SYNOPSIS
+    Hakee halutun käyttäjän AD:lta ja resetoi tämän salasanan.
+.Description
+    Skripti kysyy AD:n käyttäjänimeä, kunnes haluttu käyttäjä löytyy AD:lta (Name tai SamAccountName).
+    Tämän jälkeen pyytää kelvollista salasanaa kahteen kertaan. Salasanoja verrataan toisiinsa ja
+    salasanojen ehdot tulee täyttyä. Salasanan pitää olla vähintään 10 merkkiä pitkä, sekä siinä on
+    oltava erikoismerkkejä, isoja ja pieniä kirjaimia, sekä numeroita. Mikäli ehdot eivät täyty
+    scripti ilmoittaa salasanan olevan kelvoton. Scripti tulostaa myös oleellisimmat tiedot käyttäjästä,
+    kun käyttäjä löytyy. Scriptin alusta löytyy myös funktiomääritteet, jotka voidaan syöttää etukäteen
+    "passwdchange":en.
+.EXAMPLE
+    PS> .\Set_new_password_v.1.1.ps1
+.NOTES
+    Author: Toni Ojala
+    Date: 9.3.2022
+#>
+
+# Funktiomääritteet jotka voi halutessaan etukäteen määrittää
 Function passwdchange {
     [CmdletBinding()]
     Param (
