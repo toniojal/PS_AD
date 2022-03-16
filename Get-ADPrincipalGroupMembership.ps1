@@ -1,0 +1,1 @@
+﻿Get-ADPrincipalGroupMembership $SamAccount | select -ExpandProperty name # | Out-file $tiedosto -Encoding default -Append
